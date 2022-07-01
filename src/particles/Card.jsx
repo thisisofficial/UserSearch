@@ -89,7 +89,7 @@ export function Card() {
                             <Cont margin>
                                 <SearchSVG src={iconsearch}/>
                             </Cont>
-                            <SearchBar/>
+                            <SearchBar func={fetchUser}/>
                         </Cont>
                         
                         <Cont lighter pad="5% 5% 5% 30%" margin>

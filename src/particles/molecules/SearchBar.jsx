@@ -3,7 +3,7 @@ import { TextBox, Cont , Button, Text} from './atoms';
 import { Navigate } from 'react-router-dom'
 
 export function SearchBar(props){
-
+    const {func} = props;
     const [error, setError] = useState("");
     const [username, setUserName] = useState("");
 
@@ -45,7 +45,7 @@ export function SearchBar(props){
                 const foo= checkUser(username);
                 console.log(foo);
                 if(foo){
-                    setError(<Navigate to={"/refresh/"+username} replace={true}/>)
+                    func(username);
                 }
                 else{
                     setError("No result");
